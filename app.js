@@ -133,7 +133,7 @@ Hint: Return a new object literal from the callback that looks like:
 
 // Complete the exercise in the space below:
 let inventorNames = inventors.map((inventor) => {
-    return { first: "First Name", last: "Last Name" }
+    return { first: inventor.first, last: inventor.last };
 });
 
 // Check your work:
@@ -303,9 +303,8 @@ Use Array.prototype.every() to determine if every person in the devs array is
 
 
 // Complete the exercise in the space below:
-let isEveryone19OrOlder = devs.every((dev) =>{
-    return `${dev.year}` - `${dev.year}` >= false;
-})
+let isEveryone19OrOlder = devs.every((dev) => {
+    return new Date().getFullYear() - dev.year >= 19});
 // Check your work:
 console.log('Exercise 7 my result: ', isEveryone19OrOlder);
 console.log('Exercise 7 correct result: ', false);
